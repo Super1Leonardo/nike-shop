@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  color-scheme: dark
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,4 +25,12 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.hover-scale-125 {
+  @apply hover:scale-125 cursor-pointer ease-in-out transition-all
+}
+
+.hover-scale-115 {
+  @apply hover:scale-[115%] cursor-pointer ease-in-out transition-all
 }

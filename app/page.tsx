@@ -1,101 +1,70 @@
+'use client'
 import Image from "next/image";
+import Square from "./components/Square";
+import Rectangle from "./components/Rectangle";
+import React from "react";
+import Span from "./components/Span";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      <h1 className="font-bold md:mt-[5dvh] text-6xl md:text-7xl w-full text-center flex justify-center items-center h-[20dvh] ">ST JOHANN SHOP</h1>
+      <h3 className="w-full text-center mb-[10dvh] text-3xl px-[5dvw] md:text-4xl">Modern shop with things for your life, brand clothes & shoes</h3>
+      <div className="w-full flex items-center flex-col">
+        <div className="flex w-[70dvw] flex-col md:flex-row items-center justify-around md:mt-[5dvh]">
+          <div className='md:bg-inside hidden bg-none px-[2rem] xl:flex items-center justify-center md:justify-center text-center font-semibold h-[15dvh] md:h-[35dvh] rounded-def md:shadow-inner-2 w-[35dvh] '>
+              <h1 className="text-3xl md:text-6xl font-semibold">Nike & Puma</h1>
+          </div>
+          <Rectangle image="https://i.imgur.com/u0YdiEX.png" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="flex flex-col items-center md:flex-row justify-around w-[70dvw]  mt-[5dvh]">
+          <Rectangle image="https://i.imgur.com/XIWjXGM.png" />
+          <div className='md:bg-inside hidden bg-none px-[2rem] xl:flex items-center justify-center text-center font-semibold h-[15dvh] md:h-[35dvh] rounded-def md:shadow-inner-2 w-[35dvh]  '>
+            <h1 className="text-3xl md:text-6xl font-semibold">Only comfort things</h1>
+          </div>
+        </div>
+      </div>
+      <Span />
+      <div className="md:flex w-full hidden flex-row justify-center">
+        <div className=" bg-inside w-[70dvw] md:px-[20dvh] shadow-inner-2 py-[5dvh] mb-[5dvh] md:mb-0 justify-center flex rounded-def md:rounded-br-none md:h-[35dvh] ">
+          <h1 className="md:text-7xl text-3xl font-semibold px-[2dvw] text-center w-[50dvw] h-full flex items-center justify-center">The most important thing is YOU</h1>
+        </div>
+      </div>
+      <div className="w-full md:flex hidden justify-center">
+        <div className="w-[70dvw] flex justify-between ">
+          <div className="w-full flex items-center flex-col mt-[7.5dvh] xl:mr-[15dvh] ">
+            <div className='  flex items-center xl:justify-between justify-center w-full h-[30dvh] mb-[7.5dvh] '>
+              {/* <Image src='https://i.imgur.com/Sg93YYX.png' width={303} height={103} className="shadow-inner-2 h-full rounded-def" alt="image" />
+              <Image src='https://i.imgur.com/vXbg1R7.png' width={300} height={250} alt="image2" className="" /> */}
+              <Square img="https://i.imgur.com/Sg93YYX.png" />
+              <div className="hidden xl:block">
+              <Square img="https://i.imgur.com/vXbg1R7.png" />
+              </div>
+              {/* <div style={{ backgroundImage: `url('https://i.imgur.com/vXbg1R7.png') `}} className="w-[35%] bg-cover rounded-def bg-inside h-[100%] bg-no-repeat shadow-inner-2 bg-center " ></div> */}
+            </div>
+            <div className="w-full flex-col xl:flex-row flex items-center justify-center xl:justify-between">
+              <Square img="https://i.imgur.com/TNl9uMS.png" />
+              <div className='bg-inside  px-[2rem] flex items-center justify-center text-center font-semibold h-[15dvh] mt-[5dvh] xl:mt-0 md:h-[35dvh] rounded-def shadow-inner-2 w-full md:w-[35dvh] '>
+                <h1 className="text-3xl md:text-6xl font-semibold">All you need is here</h1>
+              </div>
+            </div>
+          </div>
+          <div style={{ backgroundImage: `url('https://i.imgur.com/aXrI3Rl.png')` }} className="bg-inside hidden xl:flex h-[80dvh] bg-no-repeat bg-center bg-cover shadow-inner-2 w-[45dvh]  "></div>
+        </div>
+      </div>
+      <div className="w-full block md:hidden px-[5dvw]">
+      <a href="/shoes">
+      <div className="w-full bg-white mb-[5dvh] py-[2dvh] rounded-def px-[4dvw] ">
+                <h1 className="text-default w-full text-center text-4xl">SHOES</h1>
+      </div>
+      </a>
+      <a href="/clothes">
+      <div className="w-full bg-white py-[2dvh] rounded-def px-[4dvw] ">
+                <h1 className="text-default w-full text-center text-4xl">CLOTHES</h1>
+      </div>
+      </a>
+      </div>
+      <Span />
     </div>
-  );
+  )
 }
