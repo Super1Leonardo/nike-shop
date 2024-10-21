@@ -34,7 +34,7 @@ export default function RootLayout({
               <a href="/clothes" ><h1 className="hover-scale-125">Clothes</h1></a>
             </div>
           </div>
-          <img className="hover-scale-125" src="https://cdn-icons-png.flaticon.com/512/2636/2636640.png" width={46} height={46} alt="logo"></img>
+          <a href="/basket"><img className="hover-scale-125" src="https://cdn-icons-png.flaticon.com/512/2636/2636640.png" width={46} height={46} alt="logo"></img></a>
         </div>
         <div className="bg-default hidden md:flex mt-[2dvh] w-full h-[7dvh] "></div>
         {children}
