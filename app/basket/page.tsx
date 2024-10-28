@@ -1,14 +1,13 @@
 'use client'
 import { useAtom } from "jotai";
 import { basket, BasketItem } from "../store";
-import { useEffect } from "react";
 
 export default function Basket() {
     const [items, setItems] = useAtom(basket)
     // const click = () => {console.log(items)}
     const deleteItem = (item1: BasketItem) => {
         // items.splice(items.indexOf(item1), 1)
-        let index = items.indexOf(item1)
+        const index = items.indexOf(item1)
         const array = [...items.slice(0, index), ...items.slice(index + 1)];
         setItems(array)
     }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Roboto_Slab } from 'next/font/google'
+import Image from 'next/image'
  
 const roboto = Roboto_Slab({
   weight: '400',
@@ -32,7 +33,15 @@ export default function RootLayout({
               <a href="/clothes" ><h1 className="hover-scale-125">Clothes</h1></a>
             </div>
           </div>
-          <a href="/basket"><img className="hover-scale-125" src="https://cdn-icons-png.flaticon.com/512/2636/2636640.png" width={46} height={46} alt="logo"></img></a>
+          <a href="/basket">
+          {/* <img className="hover-scale-125" src="https://cdn-icons-png.flaticon.com/512/2636/2636640.png" width={46} height={46} alt="logo"></img> */}
+            <Image
+              src="https://cdn-icons-png.flaticon.com/512/2636/2636640.png"
+              alt="logo"
+              width={46}
+              height={46}
+            />
+          </a>
         </div>
         <div className="bg-default hidden md:flex mt-[2dvh] w-full h-[7dvh] "></div>
         {children}

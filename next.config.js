@@ -7,6 +7,11 @@ export default {
           hostname: 'i.imgur.com',
           pathname: '**',
         },
+        {
+          protocol: 'https',
+          hostname: 'cdn-icons-png.flaticon.com',
+          pathname: '**',
+        },
       ],
     },
   };
