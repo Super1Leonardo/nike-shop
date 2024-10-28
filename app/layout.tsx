@@ -36,12 +36,7 @@ export default function RootLayout({
           </div>
           <a href="/basket">
           {/* <img className="hover-scale-125" src="https://cdn-icons-png.flaticon.com/512/2636/2636640.png" width={46} height={46} alt="logo"></img> */}
-            <Image
-              src="https://cdn-icons-png.flaticon.com/512/2636/2636640.png"
-              alt="logo"
-              width={46}
-              height={46}
-            />
+            <h1 className="text-4xl">Basket</h1>
           </a>
         </div>
         <div className="bg-default hidden md:flex mt-[2dvh] w-full h-[7dvh] "></div>
