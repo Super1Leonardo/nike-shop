@@ -1,6 +1,6 @@
 'use client'
 import { useSearchParams } from 'next/navigation';
-import { atom, useAtom } from 'jotai';
+import { useAtom } from 'jotai';
 import { basket, BasketItem } from '../store';
 
 export default function Product() {

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import { Roboto_Slab } from 'next/font/google'
-import { redirect } from "next/navigation";
  
 const roboto = Roboto_Slab({
   weight: '400',

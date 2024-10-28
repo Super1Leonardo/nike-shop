@@ -1,5 +1,4 @@
 'use client'
-import Image from "next/image";
 import Square from "./components/Square";
 import Rectangle from "./components/Rectangle";
 import React from "react";
