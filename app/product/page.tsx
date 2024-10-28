@@ -2,6 +2,7 @@
 import { useSearchParams } from 'next/navigation';
 import { useAtom } from 'jotai';
 import { basket, BasketItem } from '../store';
+import { Suspense } from 'react';
 
 export default function Product() {
     
@@ -38,6 +39,7 @@ export default function Product() {
         console.log(items)        
     }
     return (
+        <Suspense fallback={<div>Loading...</div>}>
         <div className='w-full flex justify-center '>
             <div className='w-[90dvw] h-[50dvh] '>
                 <h1 className='text-8xl w-full text-center mt-[5dvh] font-bold'>{array.name}</h1>
@@ -54,5 +56,6 @@ export default function Product() {
                 </div>
             </div>
         </div>
+        </Suspense>
     )
 }
