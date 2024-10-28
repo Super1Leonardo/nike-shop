@@ -52,17 +52,22 @@ export default function Home() {
           <div style={{ backgroundImage: `url('https://i.imgur.com/aXrI3Rl.png')` }} className="bg-inside hidden xl:flex h-[80dvh] bg-no-repeat bg-center bg-cover shadow-inner-2 w-[45dvh]  "></div>
         </div>
       </div>
-      <div className="w-full block md:hidden px-[5dvw]">
-      <a href="/shoes">
-      <div className="w-full bg-white mb-[5dvh] py-[2dvh] rounded-def px-[4dvw] ">
-                <h1 className="text-default w-full text-center text-4xl">SHOES</h1>
-      </div>
-      </a>
-      <a href="/clothes">
-      <div className="w-full bg-white py-[2dvh] rounded-def px-[4dvw] ">
-                <h1 className="text-default w-full text-center text-4xl">CLOTHES</h1>
-      </div>
-      </a>
+      <div className="w-full flex flex-col justify-around md:hidden px-[5dvw]">
+        <a href="/shoes">
+          <div className="w-full bg-white mb-[5dvh] py-[2dvh] rounded-def px-[4dvw] ">
+                    <h1 className="text-default w-full text-center text-4xl">SHOES</h1>
+          </div>
+        </a>
+        <a href="/clothes">
+          <div className="w-full bg-white py-[2dvh] rounded-def px-[4dvw] ">
+                    <h1 className="text-default w-full text-center text-4xl">CLOTHES</h1>
+          </div>
+        </a>
+        <a className="mt-[5dvh]" href="/basket">
+          <div className="w-full bg-white py-[2dvh] rounded-def px-[4dvw] ">
+                    <h1 className="text-default w-full text-center text-4xl">BASKET</h1>
+          </div>
+        </a>
       </div>
       <Span />
     </div>

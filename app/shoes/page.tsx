@@ -27,10 +27,22 @@ export default function Shoes() {
                     <div style={{ backgroundImage: `url('https://i.imgur.com/e1dabLo.png')` }} className="bg-default bg-center bg-no-repeat bg-cover shadow-inner-2 w-full h-[calc(50%-5dvh)] rounded-def "></div>
                 </div>
             </div>
-            <div className=" md:hidden bg-default shadow-inner-2 rounded-def pt-[5dvh] px-[5dvw] mx-[20dvw] ">
+            <div className=" md:hidden bg-default mb-[5dvh] shadow-inner-2 rounded-def pt-[5dvh] px-[5dvw] mx-[20dvw] ">
                 <h1 className="text-5xl text-center font-semibold">Feel comfort in your life</h1>
                 <div className="bg-cover h-[25dvh] mt-[5dvh] bg-center w-full " style={{ backgroundImage: `url('https://i.imgur.com/1DVFxnO.png')`  }} />
                 <div className="bg-cover h-[25dvh] bg-center w-full " style={{ backgroundImage: `url('https://i.imgur.com/5hbSUvt.png')`  }} />
+            </div>
+            <div className="py-[2dvh] flex justify-around flex-col ">
+                <a className="mb-[2dvh]" href="/basket">
+                    <div className="bg-white py-[2dvh] rounded-def mx-[4dvw] ">
+                        <h1 className="text-default w-full text-center text-4xl">Basket</h1>
+                    </div>
+                </a>
+                <a className="" href="/">
+                    <div className="bg-white py-[2dvh] rounded-def mx-[4dvw] ">
+                        <h1 className="text-default w-full text-center text-4xl">Home</h1>
+                    </div>
+                </a>
             </div>
         </div>
     )

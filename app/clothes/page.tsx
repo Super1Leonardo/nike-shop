@@ -24,6 +24,18 @@ export default function Shoes() {
                 <div style={{ backgroundImage: `url('https://i.imgur.com/4kgOeTp.png')`  }} className="bg-default h-full rounded-def bg-no-repeat bg-center bg-cover shadow-inner-2" />
                 <div style={{ backgroundImage: `url('https://i.imgur.com/O9KQDRc.png')`  }} className="bg-default h-full rounded-def bg-no-repeat bg-center bg-cover shadow-inner-2"></div>
             </div>
+            <div className="pb-[2dvh] flex justify-around flex-col ">
+                <a className="mb-[2dvh]" href="/basket">
+                    <div className="bg-white py-[2dvh] rounded-def mx-[4dvw] ">
+                        <h1 className="text-default w-full text-center text-4xl">Basket</h1>
+                    </div>
+                </a>
+                <a className="" href="/">
+                    <div className="bg-white py-[2dvh] rounded-def mx-[4dvw] ">
+                        <h1 className="text-default w-full text-center text-4xl">Home</h1>
+                    </div>
+                </a>
+            </div>
         </div>
     )
 }

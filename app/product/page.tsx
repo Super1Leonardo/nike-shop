@@ -41,14 +41,17 @@ export default function Product() {
         <div className='w-full flex justify-center '>
             <div className='w-[90dvw] h-[50dvh] '>
                 <h1 className='text-8xl w-full text-center mt-[5dvh] font-bold'>{array.name}</h1>
-                <div className='w-full mt-[10dvh] h-[50dvh] flex justify-between'>
-                    <div className='h-[80dvh] bg-center  bg-no-repeat w-1/2' style={{ backgroundImage: `url(${array.image})` }}></div>
-                    <div className='w-1/2'>
-                        <h1 className='text-4xl mt-[5dvh] '>{array.description}</h1>
+                <div className='w-full mt-[10dvh] h-[50dvh] flex flex-col lg:flex-row justify-between'>
+                    <div className='h-[80dvh] bg-center bg-contain bg-no-repeat lg:w-1/2' style={{ backgroundImage: `url(${array.image})` }}></div>
+                    <div className='lg:w-1/2'>
+                        <h1 className='text-4xl hidden lg:block mt-[5dvh] '>{array.description}</h1>
                         <div onClick={click} className='bg-white w-full text-6xl my-[5dvh] hover:cursor-pointer hover-scale-115 py-[2dvh] text-black rounded-def text-center'>Add to busket</div>
                     </div>
                 </div>
-
+                <div className='sm:hidden w-full flex justify-around'>
+                    <a className='border-white border-2 rounded-def w-1/2 px-[2dvw] py-[1dvh] text-center text-3xl ' href='/basket'>Busket</a>
+                    <a className='border-white border-2 rounded-def w-1/2 px-[2dvw] py-[1dvh] text-center text-3xl ' href='/shoes'>Back</a>
+                </div>
             </div>
         </div>
     )
