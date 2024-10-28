@@ -4,8 +4,8 @@ import { basket, BasketItem } from "../store";
 import { useEffect } from "react";
 
 export default function Basket() {
-    let [items, setItems] = useAtom(basket)
-    const click = () => {console.log(items)}
+    const [items, setItems] = useAtom(basket)
+    // const click = () => {console.log(items)}
     const deleteItem = (item1: BasketItem) => {
         // items.splice(items.indexOf(item1), 1)
         let index = items.indexOf(item1)
@@ -17,7 +17,7 @@ export default function Basket() {
         <div>
             <div className="bg-default w-full lg:grid grid-cols-4 py-[2dvh] h-full">
                 {items.map((item) => (
-                    <div className="border-white flex rounded-def h-52 mx-[2dvw] my-[2dvh] border-2">
+                    <div key={items.indexOf(item)+0.2} className="border-white flex rounded-def h-52 mx-[2dvw] my-[2dvh] border-2">
                         <div className="w-1/2 h-full bg-center bg-contain bg-no-repeat" style={{ backgroundImage: `url(${item.image})` }}></div>
                         <div className="h-full w-1/2 flex px-[1dvw] justify-around flex-col items-center py-[2dvh] ">
                             <h1 className="text-3xl text-center">{item.name}</h1>
