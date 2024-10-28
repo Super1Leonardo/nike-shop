@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Roboto_Slab } from 'next/font/google'
 import Image from 'next/image'
+import { Suspense } from "react";
  
 const roboto = Roboto_Slab({
   weight: '400',
@@ -44,7 +45,9 @@ export default function RootLayout({
           </a>
         </div>
         <div className="bg-default hidden md:flex mt-[2dvh] w-full h-[7dvh] "></div>
-        {children}
+        <Suspense fallback={<div>Loading...</div>}>
+          {children}
+        </Suspense>
       </body>
     </html>
   );
