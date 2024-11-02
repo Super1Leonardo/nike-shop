@@ -1,6 +1,7 @@
 'use client'
 import { useAtom } from "jotai";
 import { basket, BasketItem } from "../store";
+import { useEffect } from "react";
 
 export default function Basket() {
     const [items, setItems] = useAtom(basket)
@@ -11,9 +12,19 @@ export default function Basket() {
         const array = [...items.slice(0, index), ...items.slice(index + 1)];
         setItems(array)
     }
-    console.log(items)
+    let price: number = 0;
+    for (let i in items) {
+        console.log(items[i].price)
+        price += Number(items[i].price.slice(0, -1))
+        console.log(price)
+    }
+    const f = () => console.log('hey')
     return (
         <div>
+            <div className=" lg:flex  justify-end w-[100dvw] ">
+                <a className="w-1/2" onClick={f}><div className=" text-default bg-white mt-[2dvh] text-center mx-[2dvw] py-[2dvh] text-2xl rounded-def">Buy {price}$ </div></a>
+                <a className="w-1/2" href="/"><div className=" text-white border-2 border-white mt-[2dvh] text-center mx-[2dvw] py-[2dvh] text-2xl rounded-def">Home</div></a>
+            </div>
             <div className="bg-default w-full lg:grid grid-cols-4 py-[2dvh] h-full">
                 {items.map((item) => (
                     <div key={items.indexOf(item)+0.2} className="border-white flex rounded-def h-52 mx-[2dvw] my-[2dvh] border-2">
@@ -25,10 +36,6 @@ export default function Basket() {
                         </div>
                     </div>
                 ))}
-            </div>
-            <div className=" lg:flex  justify-end w-[100dvw] ">
-                <a className="w-1/2" href="/"><div className=" text-default bg-white mt-[2dvh] text-center mx-[2dvw] py-[2dvh] text-2xl rounded-def">Buy</div></a>
-                <a className="w-1/2" href="/"><div className=" text-white border-2 border-white mt-[2dvh] text-center mx-[2dvw] py-[2dvh] text-2xl rounded-def">Home</div></a>
             </div>
         </div>
     )
